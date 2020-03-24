@@ -40,12 +40,12 @@ li t1, 5
 bne t0, t1, not_eq # if t0 != t1 jump not_eq
 
 # Cas égaux t0 == t1
-la ???, ??? # msg <- "Ces nombres sont egaux!"
+la a0, msg_eq # msg <- "Ces nombres sont egaux!"
 j end # On a fini donc on peut sortir du if.
 
 # Cas Inégaux t0 != t1
 not_eq:
-la ???, ??? # msg <- "Ces nombres ne sont pas egaux"
+la a0, msg_neq # msg <- "Ces nombres ne sont pas egaux"
 ###
 
 end:
@@ -56,5 +56,5 @@ end:
 # inspirez vous de l'exercice 01_syscall, le registre a0 doit contenir
 # le numéro du syscall printString: 4 et a7 la chaine à afficher.
 
-li ???, 4 # numéro syscall
-???       # Quelle instruction doit-on utiliser pour faire un syscall?
+li a7, 4 # numéro syscall
+ecall       # Quelle instruction doit-on utiliser pour faire un syscall?
