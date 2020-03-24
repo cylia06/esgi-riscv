@@ -9,14 +9,16 @@
 
 # Questions: C'est quoi un registre? (mettre un x dans la bonne réponse
 #
-# - [ ] Une mémoire dans le processeur de 32 bits
+# - [ x] Une mémoire dans le processeur de 32 bits
 # - [ ] Une variable dans la mémoire
 
 mon_code: # <- Label permet d'associer un nom a une adresse.
 
 li   t0, 32     # load immediate: Charge un nombre sur max 12 bit dans un registre
-addi t0, t0, 00 # Additionne l'operande 1 (t0) et un immediat et sauvegarde du résultat (t0)
+addi t0, t0, 32 # Additionne l'operande 1 (t0) et un immediat et sauvegarde du résultat (t0)
 #     |   \ operand 1
 #     destination
 
 # Bonus: avoir 64 dans un registre en une seule instruction
+
+li t0, 64
